@@ -244,9 +244,17 @@ public class XPathParser {
         }
     }
 
+    /**
+     * 创建dom对象
+     *
+     * @param inputSource
+     *
+     * @return
+     */
     private Document createDocument(InputSource inputSource) {
         // important: this must only be called AFTER common constructor
         try {
+            // 1> 创建 DocumentBuilderFactory 对象
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             factory.setValidating(validation);
 

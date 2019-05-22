@@ -25,6 +25,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+
 class GenericTokenParserTest {
 
   public static class VariableTokenHandler implements TokenHandler {
