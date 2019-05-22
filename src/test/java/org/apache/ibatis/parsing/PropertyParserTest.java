@@ -20,6 +20,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
 
+/**
+ * 动态属性解析器
+ */
 class PropertyParserTest {
 
   @Test
