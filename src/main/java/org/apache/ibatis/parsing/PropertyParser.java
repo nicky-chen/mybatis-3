@@ -82,6 +82,7 @@ public class PropertyParser {
         public String handleToken(String content) {
             if (variables != null) {
                 String key = content;
+                // 开启默认值功能
                 if (enableDefaultValue) {
                     final int separatorIndex = content.indexOf(defaultValueSeparator);
                     String defaultValue = null;
@@ -89,10 +90,13 @@ public class PropertyParser {
                         key = content.substring(0, separatorIndex);
                         defaultValue = content.substring(separatorIndex + defaultValueSeparator.length());
                     }
+                    // 有默认值，优先替换，不存在则返回默认值
                     if (defaultValue != null) {
                         return variables.getProperty(key, defaultValue);
                     }
                 }
+
+                // 未开启默认值功能，直接替换
                 if (variables.containsKey(key)) {
                     return variables.getProperty(key);
                 }
