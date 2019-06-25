@@ -32,10 +32,12 @@ public interface TransactionFactory {
   /**
    * Sets transaction factory custom properties.
    * @param props
+   * 设置事务配置
    */
   void setProperties(Properties props);
 
   /**
+   * 创建事务
    * Creates a {@link Transaction} out of an existing connection.
    * @param conn Existing database connection
    * @return Transaction
@@ -44,6 +46,7 @@ public interface TransactionFactory {
   Transaction newTransaction(Connection conn);
 
   /**
+   * 创建事务包含隔离级别
    * Creates a {@link Transaction} out of a datasource.
    * @param dataSource DataSource to take the connection from
    * @param level Desired isolation level
