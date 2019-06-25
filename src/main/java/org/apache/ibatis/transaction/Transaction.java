@@ -22,7 +22,7 @@ import java.sql.SQLException;
  *
  * Wraps a database connection.
  * Handles the connection lifecycle that comprises: its creation, preparation, commit/rollback and close.
- * 事务接口
+ * 事务接口  同一connection内 可以多次提交
  * @author Clinton Begin
  */
 public interface Transaction {
