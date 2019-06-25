@@ -22,6 +22,7 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 
 /**
+ * 缓存日志适配器
  * @author Clinton Begin
  */
 public class LoggingCache implements Cache {

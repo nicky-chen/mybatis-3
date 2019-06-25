@@ -26,6 +26,7 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 
 /**
+ * 二级缓存
  * The 2nd level cache transactional buffer.
  * <p>
  * This class holds all cache entries that are to be added to the 2nd level cache during a Session.
