@@ -15,6 +15,7 @@
  */
 package org.apache.ibatis.type;
 
+import java.lang.reflect.Type;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -50,5 +51,10 @@ public class IntegerTypeHandler extends BaseTypeHandler<Integer> {
       throws SQLException {
     int result = cs.getInt(columnIndex);
     return result == 0 && cs.wasNull() ? null : result;
+  }
+
+  public static void main(String[] args) {
+      Type rawType = new IntegerTypeHandler().getRawType();
+      System.out.println(rawType);
   }
 }
