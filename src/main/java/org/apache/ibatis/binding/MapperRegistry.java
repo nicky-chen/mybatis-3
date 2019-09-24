@@ -96,9 +96,11 @@ public class MapperRegistry {
                 //解析 Mapper 的注解配置
                 MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);
                 parser.parse();
+                // 标记加载完成
                 loadCompleted = true;
             } finally {
                 if (!loadCompleted) {
+                    // 若加载未完成，从 knownMappers 中移除
                     knownMappers.remove(type);
                 }
             }

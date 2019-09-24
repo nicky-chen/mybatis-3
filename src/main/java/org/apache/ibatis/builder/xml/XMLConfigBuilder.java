@@ -458,6 +458,7 @@ public class XMLConfigBuilder extends BaseBuilder {
 
     /**
      * 解析 <mappers /> 标签
+     * 如果没有mapper标签根据注解来关联
      *
      * @param parent
      *
