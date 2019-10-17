@@ -207,6 +207,7 @@ public class Configuration {
     typeAliasRegistry.registerAlias("JAVASSIST", JavassistProxyFactory.class);
 
     languageRegistry.setDefaultDriverClass(XMLLanguageDriver.class);
+    // 注册到 languageRegistry 中
     languageRegistry.register(RawLanguageDriver.class);
   }
 
