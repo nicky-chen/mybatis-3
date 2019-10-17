@@ -21,6 +21,7 @@ import org.apache.ibatis.mapping.SqlSource;
 import org.apache.ibatis.session.Configuration;
 
 /**
+ * 适用于使用了 OGNL 表达式，或者使用了 ${} 表达式的 SQL
  * @author Clinton Begin
  */
 public class DynamicSqlSource implements SqlSource {
